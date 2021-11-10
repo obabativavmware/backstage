@@ -24,7 +24,6 @@ import { lightTheme } from '@backstage/theme';
 import { render, screen } from '@testing-library/react';
 import React, { PropsWithChildren } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import { defaultAppIcons } from './icons';
 import {
   configApiRef,
   createApiFactory,
@@ -38,7 +37,7 @@ import {
   analyticsApiRef,
 } from '@backstage/core-plugin-api';
 import { generateBoundRoutes, AppManager } from './AppManager';
-import { AppComponents } from './types';
+import { AppComponents, AppIcons } from './types';
 
 describe('generateBoundRoutes', () => {
   it('runs happy path', () => {
@@ -186,6 +185,8 @@ describe('Integration Test', () => {
     ThemeProvider: ({ children }) => <>{children}</>,
   };
 
+  const icons = {} as AppIcons;
+
   it('runs happy paths', async () => {
     const app = new AppManager({
       apis: [noOpAnalyticsApi],
@@ -198,7 +199,7 @@ describe('Integration Test', () => {
           theme: lightTheme,
         },
       ],
-      icons: defaultAppIcons,
+      icons,
       plugins: [],
       components,
       bindRoutes: ({ bind }) => {
@@ -252,7 +253,7 @@ describe('Integration Test', () => {
           theme: lightTheme,
         },
       ],
-      icons: defaultAppIcons,
+      icons,
       plugins: [],
       components,
       bindRoutes: ({ bind }) => {
@@ -309,7 +310,7 @@ describe('Integration Test', () => {
           theme: lightTheme,
         },
       ],
-      icons: defaultAppIcons,
+      icons,
       plugins: [
         createPlugin({
           id: 'test',
@@ -359,7 +360,7 @@ describe('Integration Test', () => {
           theme: lightTheme,
         },
       ],
-      icons: defaultAppIcons,
+      icons,
       plugins: [],
       components,
       bindRoutes: ({ bind }) => {
@@ -419,7 +420,7 @@ describe('Integration Test', () => {
           theme: lightTheme,
         },
       ],
-      icons: defaultAppIcons,
+      icons,
       plugins: [],
       components,
       bindRoutes: ({ bind }) => {
