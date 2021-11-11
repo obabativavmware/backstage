@@ -1,5 +1,17 @@
 # @backstage/dev-utils
 
+## 0.2.13
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/core-plugin-api@0.2.0
+  - @backstage/core-app-api@0.1.21
+  - @backstage/core-components@0.7.4
+  - @backstage/integration-react@0.1.14
+  - @backstage/test-utils@0.1.22
+  - @backstage/plugin-catalog-react@0.6.4
+
 ## 0.2.12
 
 ### Patch Changes

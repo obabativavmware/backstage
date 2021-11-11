@@ -1,5 +1,13 @@
 # @backstage/test-utils
 
+## 0.1.22
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/core-plugin-api@0.2.0
+  - @backstage/core-app-api@0.1.21
+
 ## 0.1.21
 
 ### Patch Changes

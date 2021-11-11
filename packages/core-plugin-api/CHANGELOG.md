@@ -1,5 +1,11 @@
 # @backstage/core-plugin-api
 
+## 0.2.0
+
+### Minor Changes
+
+- 7e18ed7f29: Removed the unused `UserFlags` type.
+
 ## 0.1.13
 
 ### Patch Changes
